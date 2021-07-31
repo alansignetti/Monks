@@ -1,0 +1,74 @@
+
+@font-face {
+    font-family: klavika;
+    src: 
+        url(assets/font/klavika-bold-webfont.woff) format('woff'),
+        url(assets/font/klavika-light-webfont.woff) format('woff'),
+        url(assets/font/klavika-medium-webfont.woff) format('woff'),
+        url(assets/font/klavika-regular-webfont.woff) format('woff');
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+ .container--slider{
+     position: relative;
+ }
+ /* .slider{
+  
+ } */
+
+.slider__img{
+    
+    top: 0;
+    left: 0;
+    width: 550%;
+    /* margin-left:-50% ; */
+}
+.slider__btn{
+    position: absolute;
+    /* background-color: green; */
+    color: white;
+    width: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 40px;
+    /* font-family: klavika light; */
+    
+}
+.slider__btn:hover{
+    color: rgba(255, 255, 255, 0.87);
+    cursor: pointer;
+    
+}
+
+.slider__btn--left{
+    left: 10px;
+}
+.slider__btn--left:hover{
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+    padding-right: 2px;
+}
+
+
+.slider__btn--right{
+    right:10px;
+    
+}
+.slider__btn--right:hover{
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+    padding-left: 2px;
+}
+
