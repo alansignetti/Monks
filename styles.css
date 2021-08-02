@@ -23,9 +23,10 @@ body{
  .container--slider{
      position: relative;
  }
- /* .slider{
-  
- } */
+ .slider{
+  background-color: black;
+  width: 100%;
+ }
 
 .slider__img{
     
