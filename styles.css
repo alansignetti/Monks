@@ -1,14 +1,35 @@
 
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&display=swap');
 @font-face {
-    font-family: klavika;
-    src: 
-        url(assets/font/klavika-bold-webfont.woff) format('woff'),
-        url(assets/font/klavika-light-webfont.woff) format('woff'),
-        url(assets/font/klavika-medium-webfont.woff) format('woff'),
-        url(assets/font/klavika-regular-webfont.woff) format('woff');
-    
+    font-family: 'klavika';
+    src:        
+        url(assets/font/klavika-regular-webfont.woff) format('woff');  
+    font-weight: 400;
+    font-style: normal;  
 }
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@font-face {
+    font-family: 'klavika';
+    src:        
+        url(assets/font/klavika-bold-webfont.woff) format('woff');  
+    font-weight: 700;
+    font-style: bold;  
+}
+@font-face {
+    font-family: 'klavika';
+    src:        
+        url(assets/font/klavika-medium-webfont.woff) format('woff');  
+    font-weight: 500;
+    font-style: medium;  
+}
+@font-face {
+    font-family: 'klavika';
+    src:        
+        url(assets/font/klavika-light-webfont.woff) format('woff');  
+    font-weight: 300;
+    font-style: lighter;  
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,8 +38,9 @@
 
 body{
 
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    overflow: hidden;
 }
  .container--slider{
      position: relative;
@@ -43,13 +65,14 @@ body{
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    font-size: 40px;
-    /* font-family: klavika light; */
+    font-size: 60px;
+    font-family: 'Advent Pro', sans-serif;
     
 }
 .slider__btn:hover{
     color: rgba(255, 255, 255, 0.87);
     cursor: pointer;
+    
     
 }
 
@@ -59,7 +82,7 @@ body{
 .slider__btn--left:hover{
     transition-timing-function: ease-in-out;
     transition-delay: 0.1s;
-    padding-right: 2px;
+    padding-right: 4px;
 }
 
 
@@ -70,6 +93,42 @@ body{
 .slider__btn--right:hover{
     transition-timing-function: ease-in-out;
     transition-delay: 0.1s;
-    padding-left: 2px;
+    padding-left: 4px;
 }
 
+
+.slider__phrase{
+    position: absolute; 
+    display: block;
+    text-transform: uppercase;
+    font-family: klavika;    
+    font-size: 40px;
+    font-weight: normal;    
+    color: honeydew;
+    text-decoration: underline 1px;
+    
+    width:330px;
+    height: 150px;
+
+    bottom: 30px;
+    left: 30px;
+}
+.slider__phrase--one{
+      
+    top: 30px;
+    left: 30px;
+    /* background-color: greenyellow; */
+    
+    
+}
+.slider__phrase--two{ 
+    bottom: 30px;
+    left: 30px;
+    /* background-color: yellow; */
+}
+
+.slider__phrase--three{ 
+    bottom: 30px;
+    left: 30px;
+    /* background-color: yellow; */
+}
