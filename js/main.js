@@ -46,6 +46,13 @@ let phrases = document.getElementsByClassName('slider__phrase');
 function HideAll(){ // except the first
     for (let i = 1; i < phrases.length; i++) {
         phrases[i].style.opacity = "0";
+        
+        if(counter == 0)  {
+            phrases[i].style.opacity = "0";            
+            phrases[i].style.transition = "opacity 0s 0s ease-in-out";
+            phrases[0].style.opacity = "1";
+            phrases[0].style.transition= "opacity 0.3s 1.6s ease-in-out";
+        }      
       }
     }
     
@@ -54,9 +61,9 @@ function HideAndShow(counter){ // except the first
     for (i = 1; i < phrases.length; i++) {
         if(counter == i){
             phrases[i-1].style.opacity = "0";
-            phrases[i-1].style.transition = "opacity 0.5s";
+            phrases[i-1].style.transition = "opacity 0.3s ease-in-out";
             phrases[i].style.opacity = "1";
-            phrases[i].style.transition = "opacity 1s";            
+            phrases[i].style.transition = "opacity 0.5s 1.5s ease-in-out";            
         }        
         }
     }
@@ -69,51 +76,52 @@ function HideAndShow(counter){ // except the first
 
 function Next(){
     // let marginLeftSlider = slider.style.marginLeft;
-    slider.style.transition = "all 1s";
+    slider.style.transition = "all 1.5s";
     
     if(counter == 8){ 
         slider.style.marginLeft = "-520%";        
         counter ++;
         HideAndShow(counter);  
-    }  
+    }   
     if(counter == 7){ 
-        slider.style.marginLeft = "-450%";        
+        slider.style.marginLeft = "-450%";
         counter ++;
         HideAndShow(counter);  
-    }   
+    }  
     if(counter == 6){ 
-        slider.style.marginLeft = "-360%";
+        slider.style.marginLeft = "-450%";
         counter ++;
         HideAndShow(counter);  
     }   
     if(counter == 5){ 
-        slider.style.marginLeft = "-290%";
+        slider.style.marginLeft = "-360%";
         counter ++;        
         HideAndShow(counter);  
     }   
     if(counter == 4){ 
-        slider.style.marginLeft = "-230%";
+        slider.style.marginLeft = "-290%";
         counter ++;
         HideAndShow(counter);  
     }   
     if(counter == 3){ 
-        slider.style.marginLeft = "-170%";        
+        slider.style.marginLeft = "-230%";        
         counter ++;
         HideAndShow(counter);  
     } 
     if(counter == 2){ 
-        slider.style.marginLeft = "-100%";
+        slider.style.marginLeft = "-170%";
         counter ++; 
         HideAndShow(counter);             
     }   
     if(counter == 1){ 
         slider.style.marginLeft = "-100%";
-        counter ++; 
+        counter ++;         
         HideAndShow(counter);          
     }   
     if(counter == 0){ 
         slider.style.marginLeft = "-55%";
         counter ++;
+        btnLeft.style.display = 'block'
         HideAndShow(counter);  
     }      
       
@@ -130,11 +138,13 @@ function Next(){
 }
 
 function Previous(){
+    counter = 0;
+    HideAll();
     btnLeft.style.display = 'none'
     slider.style.marginLeft = "0%";
     slider.style.transition = "all 1.5s";
-    counter = 0;
-    HideAll();
+    
+    
 }
 
 

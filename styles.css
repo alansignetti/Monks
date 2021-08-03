@@ -77,6 +77,8 @@ body{
 }
 
 .slider__btn--left{
+    position:absolute; 
+    z-index:300;
     left: 10px;
 }
 .slider__btn--left:hover{
@@ -87,6 +89,8 @@ body{
 
 
 .slider__btn--right{
+    position:absolute; 
+    z-index:300;
     right:10px;
     
 }
@@ -117,18 +121,49 @@ body{
       
     top: 30px;
     left: 30px;
-    /* background-color: greenyellow; */
+    
     
     
 }
 .slider__phrase--two{ 
-    bottom: 30px;
-    left: 30px;
-    /* background-color: yellow; */
+    top: 46%;
+    left: 50px;
 }
 
 .slider__phrase--three{ 
-    bottom: 30px;
-    left: 30px;
-    /* background-color: yellow; */
+    top: 46%;
+    left: 50px;
+}
+.slider__phrase--four{ 
+    top: 40%;
+    left: 70%;
+    
+}
+.slider__phrase--five{ 
+    top: 46%;
+    left: 70%;
+    text-align: right;
+}
+.slider__phrase--six{ 
+    top: 40%;
+    left: 70%;
+    text-align: right;
+    height: 250px;
+}
+.slider__phrase--seven{ 
+    top: 46%;
+    left: 50px;
+}
+.slider__phrase--eight{ 
+    top: 46%;
+    left: 50px;    
+    width:360px;
+}
+.slider__phrase--nine{ 
+    top: 46%;
+    left: 50px;
+}
+.slider__phrase--ten{ 
+    top: 3%;
+    left: 76%;
 }
