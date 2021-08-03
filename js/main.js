@@ -12,88 +12,109 @@ const phraseEight = document.querySelector("#phraseEight");
 const phraseNine = document.querySelector("#phraseNine");
 const phraseTen = document.querySelector("#phraseTen");
  
-// let phrases = document.querySelector(".slider__phrase");
 let counter = 0;
-
-
-// phraseOne.style.opacity = "1";
 let phrases = document.getElementsByClassName('slider__phrase');
 
 
+
+ 
+ 
+// function Hide(phrase){
+//     phrase.style.transition = "opacity 1s";
+//     phrase.style.opacity = "0";
+//     }
+
+// function Hide(counter){ // except the first
+    
+//     for (i = 1; i < phrases.length; i++) {
+//         if(counter == i){
+//             phrases[i-1].style.opacity = "0";
+//             phrases[i-1].style.transition = "opacity 0.5s";
+//         }        
+//       }
+//     }
+
+// function Show(counter){ // except the first
+
+//     for (i = 1; i < phrases.length; i++) {
+//         if(counter == i){
+//             phrases[i].style.opacity = "1";
+//             phrases[i].style.transition = "opacity 1s";
+//         }        
+//         }
+//     }
 function HideAll(){ // except the first
     for (let i = 1; i < phrases.length; i++) {
         phrases[i].style.opacity = "0";
       }
     }
- 
-function Hide(phrase){
-    phrase.style.transition = "opacity 1s";
-    phrase.style.opacity = "0";
+    
+function HideAndShow(counter){ // except the first
+
+    for (i = 1; i < phrases.length; i++) {
+        if(counter == i){
+            phrases[i-1].style.opacity = "0";
+            phrases[i-1].style.transition = "opacity 0.5s";
+            phrases[i].style.opacity = "1";
+            phrases[i].style.transition = "opacity 1s";            
+        }        
+        }
     }
 
-function Show(phrase){
-    phrase.style.transition = "opacity 0.5s";
-    phrase.style.opacity = "1"; 
-    
-}
 
 
-    btnLeft.style.display = 'none'
-    HideAll(); 
+    btnLeft.style.display = 'none' // hide left button from the begining
+    HideAll(); // hide all phrases except the first
 
 
 function Next(){
     // let marginLeftSlider = slider.style.marginLeft;
     slider.style.transition = "all 1s";
     
-    
+    if(counter == 8){ 
+        slider.style.marginLeft = "-520%";        
+        counter ++;
+        HideAndShow(counter);  
+    }  
     if(counter == 7){ 
         slider.style.marginLeft = "-450%";        
         counter ++;
-        Show(phraseNine);   
-        Hide(phraseEight);
+        HideAndShow(counter);  
     }   
     if(counter == 6){ 
         slider.style.marginLeft = "-360%";
         counter ++;
-        Show(phraseEight);   
-        Hide(phraseSeven); 
+        HideAndShow(counter);  
     }   
     if(counter == 5){ 
         slider.style.marginLeft = "-290%";
         counter ++;        
-        Show(phraseSeven);   
-        Hide(phraseSix); 
+        HideAndShow(counter);  
     }   
     if(counter == 4){ 
         slider.style.marginLeft = "-230%";
         counter ++;
-        Show(phraseSix);   
-        Hide(phraseFive); 
+        HideAndShow(counter);  
     }   
     if(counter == 3){ 
         slider.style.marginLeft = "-170%";        
         counter ++;
-        Show(phraseFive);   
-        Hide(phraseFour); 
+        HideAndShow(counter);  
     } 
     if(counter == 2){ 
         slider.style.marginLeft = "-100%";
         counter ++; 
-        Show(phraseFour);   
-        Hide(phraseThree);             
+        HideAndShow(counter);             
     }   
     if(counter == 1){ 
         slider.style.marginLeft = "-100%";
         counter ++; 
-        Show(phraseThree);   
-        Hide(phraseTwo);             
+        HideAndShow(counter);          
     }   
     if(counter == 0){ 
         slider.style.marginLeft = "-55%";
         counter ++;
-        Show(phraseTwo);
-        Hide(phraseOne);
+        HideAndShow(counter);  
     }      
       
     
