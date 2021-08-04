@@ -18,6 +18,8 @@ let counter = 0;
 let phrases = document.getElementsByClassName('slider__phrase');
 let navbar = document.getElementsByClassName('nav__menu--item');
 const navLength = (navbar.length)-2;
+let interface = document.querySelector(".interface--container");
+
 
 First();
 HideAll(); // hide all phrases except the first
@@ -100,6 +102,7 @@ function Navbar(counter){
             navbar[9].style.backgroundColor  = "white";    
             contact.style.display = 'block';         
         }  
+        
     }
 }
 
@@ -167,11 +170,9 @@ function Slide9(){
     HideAndShow(counter); 
     Navbar(counter);
     btnRight.style.display = 'none';   
-    // contact.style.opacity = "1";
 }
 
 function Next(){
-    // let marginLeftSlider = slider.style.marginLeft;
     slider.style.transition = "all 1.5s";
     
     if(counter == 8){ 
@@ -213,7 +214,6 @@ function Next(){
   
 }
 function Previous(){
-    // let marginLeftSlider = slider.style.marginLeft;
     slider.style.transition = "all 1.5s";  
     btnRight.style.display = 'block';  
      
@@ -264,7 +264,8 @@ function First(){
     btnLeft.style.display = 'none';
     btnRight.style.display = 'block';
     slider.style.marginLeft = "0%";
-    slider.style.transition = "all 1.5s";    
+    slider.style.transition = "all 1.5s";   
+    contact.style.display = 'none';  
 }
 
 
@@ -279,10 +280,6 @@ btnLeft.addEventListener('click',function(){
     Previous();
 });
 
-// I add this autoplay functionality as an extra
-// setInterval(function(){
-//     Next();
-// },5000)
 
 
 // navigation
@@ -317,6 +314,7 @@ btnNav8.addEventListener('click',function(){
 btnNav9.addEventListener('click',function(){
     Slide9();
 });
+
 
 
 

@@ -37,9 +37,6 @@
 }
 
 body{
-
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
     overflow: hidden;
 }
  .container--slider{
@@ -51,7 +48,6 @@ body{
  }
 
 .slider__img{
-    
     top: 0;
     left: 0;
     width: 550%;
@@ -59,7 +55,6 @@ body{
 }
 .slider__btn{
     position: absolute;
-    /* background-color: green; */
     color: white;
     width: 40px;
     top: 50%;
@@ -72,8 +67,6 @@ body{
 .slider__btn:hover{
     color: rgba(255, 255, 255, 0.87);
     cursor: pointer;
-    
-    
 }
 
 .slider__btn--left{
@@ -100,7 +93,6 @@ body{
     padding-left: 4px;
 }
 
-
 .slider__phrase{
     position: absolute; 
     display: block;
@@ -117,13 +109,9 @@ body{
     bottom: 30px;
     left: 30px;
 }
-.slider__phrase--one{
-      
+.slider__phrase--one{      
     top: 30px;
-    left: 30px;
-    
-    
-    
+    left: 30px;   
 }
 .slider__phrase--two{ 
     top: 46%;
@@ -183,12 +171,9 @@ body{
 }
 
 .nav__menu{
-    position: absolute;
-    
+    position: absolute;    
     top: 90%;
     left: 30px;
-    /* background-color: beige; */
-    /* width: 300px; */
     max-width: max-content;
     height: 30px;
 
@@ -217,7 +202,6 @@ body{
     display: inline;  
     padding-left: 5px;
     padding-right: 5px;
-    /* background-color: white; */
 }
 .nav__menu--list li{
     border-left-color: transparent;
@@ -253,13 +237,10 @@ body{
     color: white;
     text-align: end;   
 }
-.contact--info a{
-    
+.contact--info a{    
     text-decoration: none;
     color: white;
     text-decoration: underline;
-
-    
 }
 .social a{
   
@@ -268,9 +249,7 @@ body{
 }
 .social {
     width: max-content;
-    /* background-color: rgb(194, 194, 13); */
     display: flex;
-    /* margin-right: 20px;    */
     padding-left: 100px;
 }
 
@@ -280,10 +259,8 @@ body{
     top: 13px;
 }
 .mail{
-    /* display: inline-block; */
     font-size: 10px;
     width: max-content;
-    /* background-color: blue; */
     width: max-content;
     padding-left: 20px;
     color: white;
@@ -298,7 +275,6 @@ body{
 .facebook{
     font-size: 10px;
     width: max-content;
-    /* background-color: rgb(58, 56, 56); */
     width: max-content;
     padding-left: 20px;
     margin-right: 20px;
@@ -311,10 +287,8 @@ body{
     top: 13px;
 }
 .twitter{
-    /* display: inline-block; */
     font-size: 10px;
     width: max-content;
-    /* background-color: green; */
     width: max-content;
     padding-left: 20px;
     color: white;    
@@ -323,8 +297,102 @@ body{
     position: absolute;
     top: 87%;
     left: 90%;
-
     width: 6%;
+
     filter: invert(99%) sepia(58%) saturate(482%) hue-rotate(214deg) brightness(113%) contrast(100%);
 }
 
+/* .interface{
+    display:block;
+    margin:auto;
+    padding-top: 20%;
+    animation: fadein ;
+    animation-name: slidein;
+
+
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+*/
+
+
+
+
+
+/* .interface--container{
+    -webkit-animation-name: bounceIn; 
+    animation-name: bounceIn; 
+
+    -webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+} */
+/* 
+.interface{
+    display:block;
+    margin:auto;    
+    padding-top: 20%;
+    -webkit-animation-name: bounceIn; 
+    animation-name: bounceIn; 
+
+    -webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+} */
+
+@-webkit-keyframes bounceIn { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: scale(.3); 
+    } 
+
+    50% { 
+        opacity: 1; 
+        -webkit-transform: scale(1.05); 
+    } 
+
+    70% { 
+        -webkit-transform: scale(.9); 
+    } 
+
+    100% { 
+         -webkit-transform: scale(1); 
+         display: none;
+    } 
+} 
+
+@keyframes bounceIn { 
+    0% { 
+        opacity: 0; 
+        transform: scale(.3); 
+    } 
+
+    50% { 
+        opacity: 1; 
+        transform: scale(1.05); 
+    } 
+
+    70% { 
+        transform: scale(.9); 
+    } 
+
+    100% { 
+        transform: scale(1); 
+        display: none;
+        background-color: transparent;
+    } 
+} 
+
+/* .interface--container{
+    -webkit-animation-duration:4s;
+	animation-duration: 4s;
+    display: none;
+} */
