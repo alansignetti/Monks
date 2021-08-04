@@ -167,9 +167,19 @@ body{
     top: 3%;
     left: 76%;
 }
-#phraseEleven{
-    font-size: 20px;
-    /* font-weight: normal;  */
+#slider__comment{
+    position: absolute; 
+    display: block;
+    font-family: klavika;    
+    font-size: 12px;
+    font-weight: normal;    
+    color: honeydew;
+    
+    width:380px;
+    height: 150px;
+
+    bottom: -20px;
+    left: 25px;
 }
 
 .nav__menu{
@@ -219,4 +229,15 @@ body{
 #li-9{
     color: transparent;    
 }
+
+.step{
+    position: absolute;
+    font-family: klavika;
+    font-weight: lighter;
+    font-size: 12px;  
+    top: 90.5%;
+    left: 22%;
+    color: white;
+}
+
 

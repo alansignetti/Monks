@@ -11,10 +11,12 @@ const btnNav6 = document.querySelector("#li-6");
 const btnNav7 = document.querySelector("#li-7");
 const btnNav8 = document.querySelector("#li-8");
 const btnNav9 = document.querySelector("#li-9");
-
+const sliderComment = document.querySelector("#slider__comment");
+const step = document.querySelector("#step-p");
 let counter = 0;
 let phrases = document.getElementsByClassName('slider__phrase');
 let navbar = document.getElementsByClassName('nav__menu--item');
+const navLength = (navbar.length)-2;
 
 First();
 HideAll(); // hide all phrases except the first
@@ -23,20 +25,27 @@ navbar[0].style.backgroundColor  = "transparent";
 function HideAll(){ // except the first
     for (let i = 1; i < phrases.length; i++) {
         phrases[i].style.opacity = "0";     
-        
+        sliderComment.style.opacity = "0"; 
+        sliderComment.style.transition= "opacity 0.3s ease-in-out";
         if(counter == 0)  {
             phrases[i].style.opacity = "0";            
             phrases[i].style.transition = "opacity 0s 0s ease-in-out";
             phrases[0].style.opacity = "1";
-            phrases[0].style.transition= "opacity 0.3s 1.6s ease-in-out";           
+            phrases[0].style.transition= "opacity 0.3s 1.6s ease-in-out";
+            sliderComment.style.transition= "opacity 0.3s 1.6s ease-in-out";
+            sliderComment.style.opacity = "1";    
         }      
       }
     for (let i = 1; i < navbar.length; i++) {
-        navbar[i].style.backgroundColor  = "transparent";      
-    
-    if(counter == 0)  {
-        navbar[i].style.backgroundColor  = "transparent"; 
-        navbar[0].style.backgroundColor  = "white";           
+        navbar[i].style.backgroundColor  = "transparent";   
+        step.innerHTML = "";
+        if(counter == 0)  {
+            navbar[i].style.backgroundColor  = "transparent"; 
+            navbar[0].style.backgroundColor  = "white";           
+        }
+        else if ( counter  != 9){  
+        step.innerHTML = "Step "+ counter +" out of "+ navLength  +" on the path to digital enlightenment"
+
     }      
     }
 }
