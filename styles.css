@@ -222,6 +222,9 @@ body{
 .nav__menu--list li{
     border-left-color: transparent;
 }
+.nav__menu--list li:hover{
+    color: rgb(200, 195, 195);
+}
 #li-0{
     border-left-color: white;
     color: transparent;    
@@ -240,4 +243,88 @@ body{
     color: white;
 }
 
+.contact{
+    position: absolute;
+    font-family: klavika;
+    font-weight: lighter;
+    font-size: 11px;  
+    top: 40%;
+    left: 75%;
+    color: white;
+    text-align: end;   
+}
+.contact--info a{
+    
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+
+    
+}
+.social a{
+  
+    text-decoration: none;
+    color: white; 
+}
+.social {
+    width: max-content;
+    /* background-color: rgb(194, 194, 13); */
+    display: flex;
+    /* margin-right: 20px;    */
+    padding-left: 100px;
+}
+
+.gg-mail{
+    position: absolute;
+    right: 30px;
+    top: 13px;
+}
+.mail{
+    /* display: inline-block; */
+    font-size: 10px;
+    width: max-content;
+    /* background-color: blue; */
+    width: max-content;
+    padding-left: 20px;
+    color: white;
+    margin-right: 20px;    
+    margin-top: 5px;
+}
+.gg-facebook{
+    position: absolute;
+    right: 30px;
+    top: 13px;
+}
+.facebook{
+    font-size: 10px;
+    width: max-content;
+    /* background-color: rgb(58, 56, 56); */
+    width: max-content;
+    padding-left: 20px;
+    margin-right: 20px;
+    color: white;    
+}
+
+.gg-twitter{
+    position: absolute;
+    right: 30px;
+    top: 13px;
+}
+.twitter{
+    /* display: inline-block; */
+    font-size: 10px;
+    width: max-content;
+    /* background-color: green; */
+    width: max-content;
+    padding-left: 20px;
+    color: white;    
+}
+.logo{
+    position: absolute;
+    top: 87%;
+    left: 90%;
+
+    width: 6%;
+    filter: invert(99%) sepia(58%) saturate(482%) hue-rotate(214deg) brightness(113%) contrast(100%);
+}
 

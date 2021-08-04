@@ -13,6 +13,7 @@ const btnNav8 = document.querySelector("#li-8");
 const btnNav9 = document.querySelector("#li-9");
 const sliderComment = document.querySelector("#slider__comment");
 const step = document.querySelector("#step-p");
+const contact = document.querySelector(".contact");
 let counter = 0;
 let phrases = document.getElementsByClassName('slider__phrase');
 let navbar = document.getElementsByClassName('nav__menu--item');
@@ -21,6 +22,7 @@ const navLength = (navbar.length)-2;
 First();
 HideAll(); // hide all phrases except the first
 navbar[0].style.backgroundColor  = "transparent";
+contact.style.display = 'none';
 
 function HideAll(){ // except the first
     for (let i = 1; i < phrases.length; i++) {
@@ -44,9 +46,9 @@ function HideAll(){ // except the first
             navbar[0].style.backgroundColor  = "white";           
         }
         else if ( counter  != 9){  
-        step.innerHTML = "Step "+ counter +" out of "+ navLength  +" on the path to digital enlightenment"
-
+        step.innerHTML = "Step "+ counter +" out of "+ navLength  +" on the path to digital enlightenment";
     }      
+    
     }
 }
     
@@ -81,6 +83,7 @@ function Navbar(counter){
 
     for (i = 1; i < navbar.length; i++) {
         navbar[i].style.backgroundColor  = "transparent"; 
+        contact.style.display = 'none';     
         if(counter == i){
             navbar[i-1].style.backgroundColor  = "transparent";  
             navbar[i].style.backgroundColor  = "white";     
@@ -94,7 +97,8 @@ function Navbar(counter){
           
         if(counter ==9){
             btnRight.style.display = 'none';
-            navbar[9].style.backgroundColor  = "white";              
+            navbar[9].style.backgroundColor  = "white";    
+            contact.style.display = 'block';         
         }  
     }
 }
@@ -163,6 +167,7 @@ function Slide9(){
     HideAndShow(counter); 
     Navbar(counter);
     btnRight.style.display = 'none';   
+    // contact.style.opacity = "1";
 }
 
 function Next(){
